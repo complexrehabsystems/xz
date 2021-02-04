@@ -357,16 +357,6 @@ tuklib_physmem(liblzma)
 # supported by these tuklib modules, problems with these tuklib modules
 # are considered a hard error for now. This hopefully helps to catch bugs
 # in the CMake versions of the tuklib checks.
-if(NOT TUKLIB_CPUCORES_FOUND OR NOT TUKLIB_PHYSMEM_FOUND)
-    # Use SEND_ERROR instead of FATAL_ERROR. If someone reports a bug,
-    # seeing the results of the remaining checks can be useful too.
-    message(SEND_ERROR
-            "tuklib_cpucores() or tuklib_physmem() failed. "
-            "Unless you really are building for a system where these "
-            "modules are not supported (unlikely), this is a bug in the "
-            "included cmake/tuklib_*.cmake files that should be fixed. "
-            "To build anyway, edit this CMakeLists.txt to ignore this error.")
-endif()
 
 # immintrin.h:
 include(CheckIncludeFile)
