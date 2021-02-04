@@ -516,6 +516,7 @@ if(HAVE_GETOPT_LONG)
 
     install(TARGETS xzdec
             RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}"
+            BUNDLE  DESTINATION "${CMAKE_INSTALL_BINDIR}"
                     COMPONENT xzdec)
 
     if(UNIX)
@@ -643,6 +644,7 @@ if(NOT MSVC AND HAVE_GETOPT_LONG)
 
     install(TARGETS xz
             RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}"
+            BUNDLE  DESTINATION "${CMAKE_INSTALL_BINDIR}"
                     COMPONENT xz)
 
     install(FILES src/xz/xz.1
